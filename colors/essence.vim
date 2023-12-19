@@ -107,10 +107,10 @@ let g:colors_name = 'essence'
 " PMENU (LSP)
   hi Pmenu ctermfg=15 ctermbg=8
   hi PmenuSel ctermfg=15 ctermbg=9
-  hi link PmenuKind Pmenu
-  hi link PmenuKindSel PmenuSel
-  hi link PmenuExtra Pmenu
-  hi link PmenuExtraSel PmenuSel
+  hi link PmenuKind                   Pmenu
+  hi link PmenuKindSel                PmenuSel
+  hi link PmenuExtra                  Pmenu
+  hi link PmenuExtraSel               PmenuSel
   hi PmenuSbar ctermbg=8 
   hi PmenuThumb ctermbg=8
 
@@ -125,7 +125,13 @@ hi link markdownStrike                Highlight
 hi link markdownStrikeDelimiter       Highlight
 hi link markdownCode                  Code
 hi link markdownCodeDelimiter         Code
-hi link markdownHeadingDelimiter      Delimiter 
+hi link markdownHeadingDelimiter      Delimiter
+hi def link markdownUrl               Comment
+hi markdownUrlTitle ctermfg=4 ctermbg=NONE
+hi def link markdownIdDelimiter       markdownLinkDelimiter
+hi def link markdownUrlDelimiter ctermfg=4 ctermbg=NONE
+hi def link markdownUrlTitleDelimiter Delimiter
+
 
 
 hi! link TermCursor Cursor
