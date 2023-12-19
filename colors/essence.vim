@@ -1,3 +1,7 @@
+" File:       essence.vim
+" Maintainer: Yuri Ximenes Martins <yxm.dev@gmx.ie>
+" Modified:   2023-12-19
+" License:    MIT
 
 hi clear
 if exists('syntax_on')
@@ -6,167 +10,182 @@ endif
 
 let g:colors_name = 'essence'
 
+" TERMINAL colors
+    let g:terminal_ansi_colors = [  
+        \ '#262626',
+        \ '#ff5f5f',
+        \ '#87af87',
+        \ '#d7d787',
+        \ '#87afd7',
+        \ '#af87d7',
+        \ '#ea9c80', 
+        \ '#808080',
+        \ '#2b2b2b',
+        \ '#464646',
+        \ '#afd787',
+        \ '#d7d700',
+        \ '#87afaf',
+        \ '#b6b3eb',
+        \ '#af875f',
+        \ '#D0D0D0',
+        \ ]
+
+" BASICS colors
   hi Normal ctermbg=0 ctermfg=15
-  hi ColorColumn cterm=NONE ctermbg=8 ctermfg=NONE
-  hi CursorColumn cterm=NONE ctermbg=8 ctermfg=NONE
-  hi CursorLine cterm=NONE ctermbg=8 ctermfg=NONE
-  hi Comment ctermfg=244 
-  hi Conceal ctermbg=NONE ctermfg=244 
+  hi Invisible ctermbg=0 ctermfg=0
+  hi Bold cterm=bold 
+  hi ColorColumn cterm=NONE ctermbg=9 ctermfg=NONE
+  hi CursorColumn cterm=NONE ctermbg=9 ctermfg=NONE
+  hi CursorLine cterm=NONE ctermbg=9 ctermfg=NONE
+  hi Comment ctermfg=7
+  hi Code ctermbg=8 ctermfg=13 
+  hi Conceal ctermbg=NONE ctermfg=8 
   hi Constant ctermfg=5
   hi Cursor ctermbg=15 ctermfg=NONE
-  hi CursorLineNr cterm=NONE ctermbg=NONE ctermfg=0
+  hi CursorLineNr cterm=NONE ctermbg=NONE ctermfg=14
   hi Delimiter ctermfg=15
-  hi DiffAdd ctermbg=29 ctermfg=158
-  hi DiffChange ctermbg=23 ctermfg=159
-  hi DiffDelete cterm=NONE ctermbg=95 ctermfg=224
-  hi DiffText cterm=NONE ctermbg=30 ctermfg=195
+  hi DiffAdd ctermbg=8 ctermfg=2
+  hi DiffChange ctermbg=8 ctermfg=4
+  hi DiffDelete cterm=NONE ctermbg=8 ctermfg=1
+  hi DiffText cterm=NONE ctermbg=8 ctermfg=6
   hi Directory ctermfg=12
-  hi Error ctermbg=234 ctermfg=203
-  hi ErrorMsg ctermbg=234 ctermfg=203
-  hi WarningMsg ctermbg=234 ctermfg=203
-  hi EndOfBuffer ctermfg=236
-  hi NonText ctermfg=236
-  hi Whitespace ctermfg=236
-  hi Folded ctermbg=0 ctermfg=245
-  hi FoldColumn ctermbg=0 ctermfg=239
+  hi Error ctermbg=8 ctermfg=1
+  hi ErrorMsg ctermbg=8 ctermfg=1
+  hi WarningMsg ctermbg=8 ctermfg=1
+  hi EndOfBuffer ctermfg=0
+  hi NonText ctermfg=7
+  hi Whitespace ctermfg=7
+  hi Folded ctermbg=0 ctermfg=7
+  hi FoldColumn ctermbg=0 ctermfg=7
   hi Function ctermfg=4
+  hi Highlight ctermbg=8 ctermfg=14
   hi Identifier cterm=NONE ctermfg=12
   hi Ignore ctermbg=NONE ctermfg=NONE
   hi Include ctermfg=4
   hi IncSearch cterm=reverse ctermfg=NONE term=reverse
-  hi LineNr ctermbg=0 ctermfg=8
-  hi MatchParen ctermbg=NONE ctermfg=13 cterm=bold 
+  hi LineNr ctermbg=0 ctermfg=9
+  hi MatchParen ctermbg=14 ctermfg=0  
   hi ModeMsg ctermfg=14
-  hi MoreMsg ctermfg=150
+  hi MoreMsg ctermfg=3
   hi Operator ctermfg=4
-  hi Pmenu ctermbg=236 ctermfg=251
-  hi PmenuSbar ctermbg=236 ctermfg=NONE
-  hi PmenuSel ctermbg=240 ctermfg=255
-  hi PmenuThumb ctermbg=251 ctermfg=NONE
-  hi PreProc ctermfg=150
-  hi Question ctermfg=150
-  hi QuickFixLine ctermbg=236 ctermfg=15
   hi Search ctermbg=8 ctermfg=6
-  hi SignColumn ctermbg=0 ctermfg=239
-  hi Special ctermfg=150
-  hi SpecialKey ctermfg=240
-  hi SpellBad ctermbg=60 ctermfg=15
+  hi SignColumn ctermbg=0 ctermfg=8
+  hi Special ctermfg=14
+  hi SpecialKey ctermfg=14
+  hi SpellBad ctermbg=6 ctermfg=0
   hi SpellCap ctermbg=NONE ctermfg=NONE
-  hi SpellLocal ctermbg=101 ctermfg=15
-  hi SpellRare ctermbg=97 ctermfg=15
+  hi SpellLocal ctermbg=13 ctermfg=0
+  hi SpellRare ctermbg=4 ctermfg=0
   hi Statement ctermfg=4
-  hi StatusLine cterm=reverse ctermbg=234 ctermfg=245 term=reverse
-  hi StatusLineTerm cterm=reverse ctermbg=234 ctermfg=245 term=reverse
-  hi StatusLineNC cterm=reverse ctermbg=238 ctermfg=233
-  hi StatusLineTermNC cterm=reverse ctermbg=238 ctermfg=233
+  hi StatusLine cterm=reverse ctermbg=9 ctermfg=0 term=reverse
+  hi StatusLineTerm cterm=reverse ctermbg=9 ctermfg=0 term=reverse
+  hi StatusLineNC cterm=reverse ctermbg=9 ctermfg=0
+  hi StatusLineTermNC cterm=reverse ctermbg=9 ctermfg=0
   hi StorageClass ctermfg=4
   hi String ctermfg=12
   hi Structure ctermfg=4
-  hi TabLine cterm=NONE ctermbg=233 ctermfg=238
-  hi TabLineFill cterm=reverse ctermbg=238 ctermfg=233
-  hi TabLineSel cterm=NONE ctermbg=234 ctermfg=15
-  hi TermCursorNC ctermbg=8 ctermfg=234
-  hi Title ctermfg=216
+  hi TabLine cterm=NONE ctermbg=0 ctermfg=0
+  hi TabLineFill ctermbg=15 ctermfg=0
+  hi TabLineSel cterm=NONE ctermbg=15 ctermfg=0
+  hi TermCursorNC ctermbg=8 ctermfg=0
+  hi Title ctermfg=6
   hi Todo ctermbg=234 ctermfg=150
   hi Type ctermfg=4
   hi Underlined cterm=underline ctermfg=12 term=underline
-  hi VertSplit cterm=NONE ctermbg=233 ctermfg=233
-  hi Visual ctermbg=8 ctermfg=NONE
+  hi VertSplit cterm=NONE ctermbg=NONE ctermfg=NONE
+  hi Visual ctermbg=9 ctermfg=NONE
   hi VisualNOS ctermbg=8 ctermfg=NONE
   hi WildMenu ctermbg=255 ctermfg=234
-  hi icebergNormalFg ctermfg=15
-  hi diffAdded ctermfg=150
-  hi diffRemoved ctermfg=203
-  hi ALEErrorSign ctermbg=0 ctermfg=203
-  hi ALEWarningSign ctermbg=0 ctermfg=216
-  hi ALEVirtualTextError ctermfg=203
-  hi ALEVirtualTextWarning ctermfg=216
-  hi CtrlPMode1 ctermbg=236 ctermfg=8
-  hi EasyMotionShade ctermfg=239
-  hi EasyMotionTarget ctermfg=150
-  hi EasyMotionTarget2First ctermfg=216
-  hi EasyMotionTarget2Second ctermfg=216
-  hi GitGutterAdd ctermbg=0 ctermfg=150
-  hi GitGutterChange ctermbg=0 ctermfg=12
-  hi GitGutterChangeDelete ctermbg=0 ctermfg=12
-  hi GitGutterDelete ctermbg=0 ctermfg=203
-  hi gitmessengerEndOfBuffer ctermbg=0 ctermfg=239
-  hi gitmessengerPopupNormal ctermbg=0 ctermfg=15
-  hi Sneak ctermbg=5 ctermfg=234
-  hi SneakScope ctermbg=236 ctermfg=8
-  hi SyntasticErrorSign ctermbg=0 ctermfg=203
-  hi SyntasticStyleErrorSign ctermbg=0 ctermfg=203
-  hi SyntasticStyleWarningSign ctermbg=0 ctermfg=216
-  hi SyntasticWarningSign ctermbg=0 ctermfg=216
-  hi TSFunction ctermfg=15
-  hi TSFunctionBuiltin ctermfg=15
-  hi TSFunctionMacro ctermfg=15
-  hi TSMethod ctermfg=15
-  hi TSURI cterm=underline ctermfg=12 term=underline
-  hi ZenSpace ctermbg=203
-  hi DiagnosticUnderlineInfo cterm=underline ctermfg=12 term=underline
-  hi DiagnosticInfo ctermfg=12
-  hi DiagnosticSignInfo ctermbg=0 ctermfg=12
-  hi DiagnosticUnderlineHint cterm=underline ctermfg=8 term=underline
-  hi DiagnosticHint ctermfg=14
-  hi DiagnosticSignHint ctermbg=0 ctermfg=8
-  hi DiagnosticUnderlineWarn cterm=underline ctermfg=216 term=underline
-  hi DiagnosticWarn ctermfg=216
-  hi DiagnosticSignWarn ctermbg=0 ctermfg=216
-  hi DiagnosticUnderlineError cterm=underline ctermfg=203 term=underline
-  hi DiagnosticError ctermfg=203
-  hi DiagnosticSignError ctermbg=0 ctermfg=203 
-  hi DiagnosticFloatingHint ctermbg=236 ctermfg=251
-  hi icebergALAccentRed ctermfg=203
+  hi NormalFg ctermfg=15
+  hi diffAdded ctermbg=8 ctermfg=2
+  hi diffRemoved cterm=NONE ctermbg=8 ctermfg=1
+  hi ALEErrorSign ctermbg=8 ctermfg=15
+  hi ALEWarningSign ctermbg=8 ctermfg=15
+  hi ALEVirtualTextError ctermfg=1
+  hi ALEVirtualTextWarning ctermfg=1 
+
+" PMENU (LSP)
+  hi Pmenu ctermfg=15 ctermbg=8
+  hi PmenuSel ctermfg=15 ctermbg=9
+  hi link PmenuKind Pmenu
+  hi link PmenuKindSel PmenuSel
+  hi link PmenuExtra Pmenu
+  hi link PmenuExtraSel PmenuSel
+  hi PmenuSbar ctermbg=8 
+  hi PmenuThumb ctermbg=8
+
+" MARKDOWN
+hi link markdownItalic                Highlight
+hi link markdownItalicDelimiter       Highlight
+hi link markdownBold                  Highlight
+hi link markdownBoldDelimiter         Highlight
+hi link markdownBoldItalic            Highlight
+hi link markdownBoldItalicDelimiter   Highlight
+hi link markdownStrike                Highlight
+hi link markdownStrikeDelimiter       Highlight
+hi link markdownCode                  Code
+hi link markdownCodeDelimiter         Code
+hi link markdownHeadingDelimiter      Delimiter 
 
 
 hi! link TermCursor Cursor
 hi! link ToolbarButton TabLineSel
 hi! link ToolbarLine TabLineFill
+
 hi! link cssBraces Delimiter
 hi! link cssClassName Special
-hi! link cssClassNameDot icebergNormalFg
+hi! link cssClassNameDot NormalFg
 hi! link cssPseudoClassId Special
 hi! link cssTagName Statement
+
 hi! link helpHyperTextJump Constant
 hi! link htmlArg Constant
 hi! link htmlEndTag Statement
 hi! link htmlTag Statement
-hi! link jsonQuote icebergNormalFg
+
+hi! link jsonQuote NormalFg
+
 hi! link phpVarSelector Identifier
+
 hi! link pythonFunction Title
+
 hi! link rubyDefine Statement
 hi! link rubyFunction Title
 hi! link rubyInterpolationDelimiter String
 hi! link rubySharpBang Comment
 hi! link rubyStringDelimiter String
-hi! link rustFuncCall icebergNormalFg
+
+hi! link rustFuncCall NormalFg
 hi! link rustFuncName Title
 hi! link rustType Constant
+
 hi! link sassClass Special
-hi! link shFunction icebergNormalFg
+
+hi! link shFunction NormalFg
+
 hi! link vimContinue Comment
 hi! link vimFuncSID vimFunction
-hi! link vimFuncVar icebergNormalFg
+hi! link vimFuncVar NormalFg
 hi! link vimFunction Title
 hi! link vimGroup Statement
 hi! link vimHiGroup Statement
 hi! link vimHiTerm Identifier
 hi! link vimMapModKey Special
 hi! link vimOption Identifier
-hi! link vimVar icebergNormalFg
+hi! link vimVar NormalFg
+
 hi! link xmlAttrib Constant
 hi! link xmlAttribPunct Statement
 hi! link xmlEndTag Statement
 hi! link xmlNamespace Statement
 hi! link xmlTag Statement
 hi! link xmlTagName Statement
+
 hi! link yamlKeyValueDelimiter Delimiter
-hi! link CtrlPPrtCursor Cursor
-hi! link CtrlPMatch Title
-hi! link CtrlPMode2 StatusLine
-hi! link deniteMatched icebergNormalFg
+
+hi! link deniteMatched NormalFg
 hi! link deniteMatchedChar Title
+
 hi! link elixirBlockDefinition Statement
 hi! link elixirDefine Statement
 hi! link elixirDocSigilDelimiter String
@@ -175,25 +194,28 @@ hi! link elixirExUnitMacro Statement
 hi! link elixirExceptionDefine Statement
 hi! link elixirFunctionDeclaration Title
 hi! link elixirKeyword Statement
-hi! link elixirModuleDeclaration icebergNormalFg
+hi! link elixirModuleDeclaration NormalFg
 hi! link elixirModuleDefine Statement
 hi! link elixirPrivateDefine Statement
 hi! link elixirStringDelimiter String
-hi! link jsFlowMaybe icebergNormalFg
-hi! link jsFlowObject icebergNormalFg
-hi! link jsFlowType PreProc
-hi! link graphqlName icebergNormalFg
-hi! link graphqlOperator icebergNormalFg
+
+hi! link graphqlName NormalFg
+hi! link graphqlOperator NormalFg
+
 hi! link gitmessengerHash Comment
 hi! link gitmessengerHeader Statement
 hi! link gitmessengerHistory Constant
+
+hi! link jsFlowMaybe NormalFg
+hi! link jsFlowObject NormalFg
+hi! link jsFlowType PreProc
 hi! link jsArrowFunction Operator
-hi! link jsClassDefinition icebergNormalFg
+hi! link jsClassDefinition NormalFg
 hi! link jsClassFuncName Title
 hi! link jsExport Statement
 hi! link jsFuncName Title
 hi! link jsFutureKeys Statement
-hi! link jsFuncCall icebergNormalFg
+hi! link jsFuncCall NormalFg
 hi! link jsGlobalObjects Statement
 hi! link jsModuleKeywords Statement
 hi! link jsModuleOperators Statement
@@ -203,21 +225,20 @@ hi! link jsObjectKey Identifier
 hi! link jsSuper Statement
 hi! link jsTemplateBraces Special
 hi! link jsUndefined Constant
-hi! link markdownBold Special
-hi! link markdownCode String
-hi! link markdownCodeDelimiter String
-hi! link markdownHeadingDelimiter Comment
-hi! link markdownRule Comment
+
 hi! link ngxDirective Statement
-hi! link plug1 icebergNormalFg
+
+hi! link plug1 NormalFg
 hi! link plug2 Identifier
 hi! link plugDash Comment
 hi! link plugMessage Special
+
 hi! link SignifySignAdd GitGutterAdd
 hi! link SignifySignChange GitGutterChange
 hi! link SignifySignChangeDelete GitGutterChangeDelete
 hi! link SignifySignDelete GitGutterDelete
 hi! link SignifySignDeleteFirstLine SignifySignDelete
+
 hi! link StartifyBracket Comment
 hi! link StartifyFile Identifier
 hi! link StartifyFooter Constant
@@ -226,21 +247,23 @@ hi! link StartifyNumber Special
 hi! link StartifyPath Comment
 hi! link StartifySection Statement
 hi! link StartifySlash Comment
-hi! link StartifySpecial icebergNormalFg
+hi! link StartifySpecial NormalFg
+
 hi! link svssBraces Delimiter
-hi! link swiftIdentifier icebergNormalFg
+hi! link swiftIdentifier NormalFg
+
 hi! link TSAttribute Special
 hi! link TSBoolean Constant
 hi! link TSCharacter Constant
 hi! link TSComment Comment
-hi! link TSConstructor icebergNormalFg
+hi! link TSConstructor NormalFg
 hi! link TSConditional Statement
 hi! link TSConstant Constant
 hi! link TSConstBuiltin Constant
 hi! link TSConstMacro Constant
 hi! link TSError Error
 hi! link TSException Statement
-hi! link TSField icebergNormalFg
+hi! link TSField NormalFg
 hi! link TSFloat Constant
 hi! link TSInclude Statement
 hi! link TSKeyword Statement
@@ -248,12 +271,12 @@ hi! link TSKeywordFunction Function
 hi! link TSLabel Special
 hi! link TSNamespace Statement
 hi! link TSNumber Constant
-hi! link TSOperator icebergNormalFg
-hi! link TSParameter icebergNormalFg
-hi! link TSParameterReference icebergNormalFg
+hi! link TSOperator NormalFg
+hi! link TSParameter NormalFg
+hi! link TSParameterReference NormalFg
 hi! link TSProperty TSField
-hi! link TSPunctDelimiter icebergNormalFg
-hi! link TSPunctBracket icebergNormalFg
+hi! link TSPunctDelimiter NormalFg
+hi! link TSPunctBracket NormalFg
 hi! link TSPunctSpecial Special
 hi! link TSRepeat Statement
 hi! link TSString String
@@ -262,20 +285,80 @@ hi! link TSStringEscape Special
 hi! link TSTag htmlTagName
 hi! link TSTagAttribute htmlArg
 hi! link TSTagDelimiter htmlTagName
-hi! link TSText icebergNormalFg
+hi! link TSText NormalFg
 hi! link TSTitle Title
 hi! link TSType Type
 hi! link TSTypeBuiltin Type
-hi! link TSVariable icebergNormalFg
+hi! link TSVariable NormalFg
 hi! link TSVariableBuiltin Statement
-hi! link typescriptAjaxMethods icebergNormalFg
-hi! link typescriptBraces icebergNormalFg
-hi! link typescriptEndColons icebergNormalFg
+hi! link typescriptAjaxMethods NormalFg
+hi! link typescriptBraces NormalFg
+hi! link typescriptEndColons NormalFg
 hi! link typescriptFuncKeyword Statement
 hi! link typescriptGlobalObjects Statement
-hi! link typescriptHtmlElemProperties icebergNormalFg
+hi! link typescriptHtmlElemProperties NormalFg
 hi! link typescriptIdentifier Statement
-hi! link typescriptMessage icebergNormalFg
+hi! link typescriptMessage NormalFg
 hi! link typescriptNull Constant
-hi! link typescriptParens icebergNormalFg
+hi! link typescriptParens NormalFg
 
+" TEX (Vimtex Syntax
+"> General Delimiters
+    hi! texDelim ctermfg=14
+"> Commands
+    hi! texCmd ctermfg=12
+    hi! texOpt ctermfg=4
+    hi! texArg ctermfg=5
+"> Document Class
+    hi! texCmdClass ctermfg=5
+"> Packages
+    hi! texCmdPackage ctermfg=5
+"> Includes
+    hi! texCmdInput ctermfg=5
+"> Newtheorem
+    hi! texCmdNewthm ctermfg=5
+"> Options
+    hi! texFileOpt ctermfg=2
+    hi! texFilesOpt ctermfg=2
+    hi! texNewthmOptCounter ctermfg=2
+"> Arguments
+    hi! texFileArg ctermfg=12
+    hi! texFilesArg ctermfg=12
+    hi! texNewthmArgName ctermfg=12
+    hi! texNewthmArgPrinted ctermfg=14
+"> Title
+    hi! texCmdTitle ctermfg=5
+    hi! texTitleArg ctermfg=12
+"> Author
+    hi! texCmdAuthor ctermfg=5
+    hi! texAuthorOpt ctermfg=2
+    hi! texAuthorArg ctermfg=12
+"> Sections
+    hi! texCmdPart ctermfg=4
+    hi! texPartArgTitle ctermfg=9
+"> Environments
+    hi! texCmdEnv ctermfg=4
+    hi! texEnvArgName ctermfg=2
+    hi! texCmdItem ctermfg=5
+"> References
+    hi! texCmdRef ctermfg=5
+    hi! texRefArg ctermfg=13
+"> Math Delimiters
+    hi! texMathDelimZone ctermfg=14
+    hi! texMathZoneLI ctermfg=14
+    hi! texMathZoneLD ctermfg=14
+    hi! texMathZoneTI ctermfg=14
+    hi! texMathZoneTD ctermfg=14
+"> Equation Env
+    hi! texCmdMathEnv ctermfg=4
+    hi! texMathEnvArgName ctermfg=2
+    hi! texMathZoneEnv ctermfg=14
+    hi! texMathZone ctermfg=12
+"> Operators
+    hi! texMathOper ctermfg=14
+    hi! texMathSub ctermfg=14
+    hi! texMathSuper ctermfg=14
+    hi! texMathSuperSub ctermfg=14
+"> Tikzcd
+"> Error
+    hi! texMathError ctermfg=0 ctermbg=9
