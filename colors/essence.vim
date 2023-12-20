@@ -31,123 +31,142 @@ let g:colors_name = 'essence'
         \ ]
 
 " BASICS colors
-  hi Normal ctermbg=0 ctermfg=15
-  hi Invisible ctermbg=0 ctermfg=0
-  hi Bold cterm=bold 
-  hi ColorColumn cterm=NONE ctermbg=9 ctermfg=NONE
-  hi CursorColumn cterm=NONE ctermbg=9 ctermfg=NONE
-  hi CursorLine cterm=NONE ctermbg=9 ctermfg=NONE
-  hi Comment ctermfg=7
-  hi Code ctermbg=8 ctermfg=13 
-  hi Conceal ctermbg=NONE ctermfg=8 
-  hi Constant ctermfg=5
-  hi Cursor ctermbg=15 ctermfg=NONE
-  hi CursorLineNr cterm=NONE ctermbg=NONE ctermfg=14
-  hi Delimiter ctermfg=15
-  hi DiffAdd ctermbg=8 ctermfg=2
-  hi DiffChange ctermbg=8 ctermfg=4
-  hi DiffDelete cterm=NONE ctermbg=8 ctermfg=1
-  hi DiffText cterm=NONE ctermbg=8 ctermfg=6
-  hi Directory ctermfg=12
-  hi Error ctermbg=8 ctermfg=1
-  hi ErrorMsg ctermbg=8 ctermfg=1
-  hi WarningMsg ctermbg=8 ctermfg=1
-  hi EndOfBuffer ctermfg=0
-  hi NonText ctermfg=7
-  hi Whitespace ctermfg=7
-  hi Folded ctermbg=0 ctermfg=7
-  hi FoldColumn ctermbg=0 ctermfg=7
-  hi Function ctermfg=4
-  hi Highlight ctermbg=8 ctermfg=14
-  hi Identifier cterm=NONE ctermfg=12
-  hi Ignore ctermbg=NONE ctermfg=NONE
-  hi Include ctermfg=4
-  hi IncSearch cterm=reverse ctermfg=NONE term=reverse
-  hi LineNr ctermbg=0 ctermfg=9
-  hi MatchParen ctermbg=14 ctermfg=0  
-  hi ModeMsg ctermfg=14
-  hi MoreMsg ctermfg=3
-  hi Operator ctermfg=4
-  hi Search ctermbg=8 ctermfg=6
-  hi SignColumn ctermbg=0 ctermfg=8
-  hi Special ctermfg=14
-  hi SpecialKey ctermfg=14
-  hi SpellBad ctermbg=6 ctermfg=0
-  hi SpellCap ctermbg=NONE ctermfg=NONE
-  hi SpellLocal ctermbg=13 ctermfg=0
-  hi SpellRare ctermbg=4 ctermfg=0
-  hi Statement ctermfg=4
-  hi StatusLine cterm=reverse ctermbg=9 ctermfg=0 term=reverse
-  hi StatusLineTerm cterm=reverse ctermbg=9 ctermfg=0 term=reverse
-  hi StatusLineNC cterm=reverse ctermbg=9 ctermfg=0
-  hi StatusLineTermNC cterm=reverse ctermbg=9 ctermfg=0
-  hi StorageClass ctermfg=4
-  hi String ctermfg=12
-  hi Structure ctermfg=4
-  hi TabLine cterm=NONE ctermbg=0 ctermfg=0
-  hi TabLineFill ctermbg=15 ctermfg=0
-  hi TabLineSel cterm=NONE ctermbg=15 ctermfg=0
-  hi TermCursorNC ctermbg=8 ctermfg=0
-  hi Title ctermfg=6
-  hi Todo ctermbg=234 ctermfg=150
-  hi Type ctermfg=4
-  hi Underlined cterm=underline ctermfg=12 term=underline
-  hi VertSplit cterm=NONE ctermbg=NONE ctermfg=NONE
-  hi Visual ctermbg=9 ctermfg=NONE
-  hi VisualNOS ctermbg=8 ctermfg=NONE
-  hi WildMenu ctermbg=255 ctermfg=234
-  hi NormalFg ctermfg=15
-  hi diffAdded ctermbg=8 ctermfg=2
-  hi diffRemoved cterm=NONE ctermbg=8 ctermfg=1
-  hi ALEErrorSign ctermbg=8 ctermfg=15
-  hi ALEWarningSign ctermbg=8 ctermfg=15
-  hi ALEVirtualTextError ctermfg=1
-  hi ALEVirtualTextWarning ctermfg=1 
+"> Background
+    hi Normal ctermbg=0 ctermfg=15
+    hi NormalFg ctermbg=NONE ctermfg=15
+    hi Invisible ctermbg=0 ctermfg=0
+"> Text Style
+    hi Bold ctermbg=NONE ctermfg=NONE cterm=bold
+    hi Italic ctermbg=NONE ctermfg=NONE cterm=italic
+    hi Underlined cterm=underline ctermfg=NONE term=underline
+    hi Code ctermbg=8 ctermfg=13
+    hi Comment ctermfg=7
+    hi Conceal ctermbg=NONE ctermfg=NONE
+    hi Constant ctermfg=5
+    hi NonText ctermfg=7
+    hi Whitespace ctermfg=7
+    hi Function ctermfg=4
+    hi Title ctermfg=6
+    hi Todo ctermbg=NONE ctermfg=6
+    hi Operator ctermfg=4
+    hi Special ctermfg=14
+    hi SpecialKey ctermfg=14
+    hi linkText ctermbg=NONE ctermfg=4 term=underline
+    hi MatchParen ctermbg=14 ctermfg=0
+    hi String ctermfg=12
+    hi Type ctermfg=4
+    hi Highlight ctermbg=8 ctermfg=14
+    hi Delimiter ctermfg=14
+    hi Folded ctermbg=0 ctermfg=7
+    hi FoldColumn ctermbg=0 ctermfg=7
+    hi Identifier cterm=NONE ctermfg=12
+    hi Statement ctermfg=4
+    hi Structure ctermfg=4
+    hi StorageClass ctermfg=4
+"> Search
+    hi Search ctermbg=8 ctermfg=6
+    hi IncSearch cterm=reverse ctermfg=NONE term=reverse  
+"> Diff
+    hi DiffAdd ctermbg=8 ctermfg=2
+    hi DiffChange ctermbg=8 ctermfg=4
+    hi DiffDelete cterm=NONE ctermbg=8 ctermfg=1
+    hi DiffText cterm=NONE ctermbg=8 ctermfg=6
+    hi diffAdded ctermbg=8 ctermfg=2
+    hi diffRemoved cterm=NONE ctermbg=8 ctermfg=1
+"> Error
+    hi Error ctermbg=8 ctermfg=1
+    hi ErrorMsg ctermbg=8 ctermfg=1
+    hi WarningMsg ctermbg=8 ctermfg=1
+"> Spell
+    hi SpellBad ctermbg=6 ctermfg=0
+    hi SpellCap ctermbg=NONE ctermfg=NONE
+    hi SpellLocal ctermbg=13 ctermfg=0
+    hi SpellRare ctermbg=4 ctermfg=0
+"> Cursor
+    hi ColorColumn cterm=NONE ctermbg=9 ctermfg=NONE
+    hi CursorColumn cterm=NONE ctermbg=9 ctermfg=NONE
+    hi CursorLine cterm=NONE ctermbg=9 ctermfg=NONE 
+    hi Cursor ctermbg=15 ctermfg=NONE
+    hi CursorLineNr cterm=NONE ctermbg=NONE ctermfg=14
+    hi TermCursorNC ctermbg=8 ctermfg=0
+"> Status Line
+    hi StatusLine cterm=reverse ctermbg=9 ctermfg=0 term=reverse
+    hi StatusLineTerm cterm=reverse ctermbg=9 ctermfg=0 term=reverse
+    hi StatusLineNC cterm=reverse ctermbg=9 ctermfg=0
+    hi StatusLineTermNC cterm=reverse ctermbg=9 ctermfg=0
+"> Tab Line
+    hi TabLine cterm=NONE ctermbg=0 ctermfg=0
+    hi TabLineFill ctermbg=15 ctermfg=0
+    hi TabLineSel cterm=NONE ctermbg=15 ctermfg=0
+"> Line Number
+    hi LineNr ctermbg=0 ctermfg=9
+    hi SignColumn ctermbg=0 ctermfg=8
+"> Buffer
+    hi EndOfBuffer ctermfg=0
+    hi VertSplit cterm=NONE ctermbg=NONE ctermfg=NONE
+    hi Visual ctermbg=9 ctermfg=NONE
+    hi VisualNOS ctermbg=9 ctermfg=NONE
+"> Messages
+    hi ModeMsg ctermfg=14
+    hi MoreMsg ctermfg=3
+"> Other
+    hi Ignore ctermbg=NONE ctermfg=NONE
+    hi Include ctermfg=4
+
+" NETRW
+    hi Directory ctermfg=12  
+
+" ALE
+    hi ALEErrorSign ctermbg=8 ctermfg=15
+    hi ALEWarningSign ctermbg=8 ctermfg=15
+    hi ALEVirtualTextError ctermfg=1
+    hi ALEVirtualTextWarning ctermfg=1  
 
 " PMENU (LSP)
-  hi Pmenu ctermfg=15 ctermbg=8
-  hi PmenuSel ctermfg=15 ctermbg=9
-  hi link PmenuKind                   Pmenu
-  hi link PmenuKindSel                PmenuSel
-  hi link PmenuExtra                  Pmenu
-  hi link PmenuExtraSel               PmenuSel
-  hi PmenuSbar ctermbg=8 
-  hi PmenuThumb ctermbg=8
+    hi Pmenu ctermfg=15 ctermbg=8
+    hi PmenuSel ctermfg=15 ctermbg=9
+    hi link PmenuKind                   Pmenu
+    hi link PmenuKindSel                PmenuSel
+    hi link PmenuExtra                  Pmenu
+    hi link PmenuExtraSel               PmenuSel
+    hi PmenuSbar ctermbg=8 
+    hi PmenuThumb ctermbg=8
 
 " MARKDOWN
-hi link markdownItalic                Highlight
-hi link markdownItalicDelimiter       Highlight
-hi link markdownBold                  Highlight
-hi link markdownBoldDelimiter         Highlight
-hi link markdownBoldItalic            Highlight
-hi link markdownBoldItalicDelimiter   Highlight
-hi link markdownStrike                Highlight
-hi link markdownStrikeDelimiter       Highlight
-hi link markdownCode                  Code
-hi link markdownCodeDelimiter         Code
-hi link markdownHeadingDelimiter      Delimiter
-hi def link markdownUrl               Comment
-hi markdownUrlTitle ctermfg=4 ctermbg=NONE
-hi def link markdownIdDelimiter       markdownLinkDelimiter
-hi def link markdownUrlDelimiter ctermfg=4 ctermbg=NONE
-hi def link markdownUrlTitleDelimiter Delimiter
-
+    hi link markdownItalic                Highlight
+    hi link markdownItalicDelimiter       Highlight
+    hi link markdownBold                  Highlight
+    hi link markdownBoldDelimiter         Highlight
+    hi link markdownBoldItalic            Highlight
+    hi link markdownBoldItalicDelimiter   Highlight
+    hi link markdownStrike                Highlight
+    hi link markdownStrikeDelimiter       Highlight
+    hi link markdownCode                  Code
+    hi link markdownCodeDelimiter         Code
+    hi link markdownHeadingDelimiter      Delimiter
+    hi def link markdownUrl               Comment
+    hi markdownUrlTitle ctermfg=4 ctermbg=NONE
+    hi def link markdownIdDelimiter       markdownLinkDelimiter
+    hi markdownUrlDelimiter ctermfg=4 ctermbg=NONE
+    hi def link markdownUrlTitleDelimiter Delimiter
 
 
 hi! link TermCursor Cursor
 hi! link ToolbarButton TabLineSel
 hi! link ToolbarLine TabLineFill
 
+" HTML
+hi! link helpHyperTextJump Constant
+hi! link htmlArg Constant
+hi! link htmlEndTag Statement
+hi! link htmlTag Statement
+
+" CSS
 hi! link cssBraces Delimiter
 hi! link cssClassName Special
 hi! link cssClassNameDot NormalFg
 hi! link cssPseudoClassId Special
 hi! link cssTagName Statement
-
-hi! link helpHyperTextJump Constant
-hi! link htmlArg Constant
-hi! link htmlEndTag Statement
-hi! link htmlTag Statement
 
 hi! link jsonQuote NormalFg
 
@@ -169,6 +188,7 @@ hi! link sassClass Special
 
 hi! link shFunction NormalFg
 
+" VIM
 hi! link vimContinue Comment
 hi! link vimFuncSID vimFunction
 hi! link vimFuncVar NormalFg
@@ -180,12 +200,15 @@ hi! link vimMapModKey Special
 hi! link vimOption Identifier
 hi! link vimVar NormalFg
 
+" XML
 hi! link xmlAttrib Constant
 hi! link xmlAttribPunct Statement
 hi! link xmlEndTag Statement
 hi! link xmlNamespace Statement
 hi! link xmlTag Statement
 hi! link xmlTagName Statement
+
+" YAML
 
 hi! link yamlKeyValueDelimiter Delimiter
 
@@ -212,6 +235,7 @@ hi! link gitmessengerHash Comment
 hi! link gitmessengerHeader Statement
 hi! link gitmessengerHistory Constant
 
+" JAVASCRIPT
 hi! link jsFlowMaybe NormalFg
 hi! link jsFlowObject NormalFg
 hi! link jsFlowType PreProc
@@ -257,6 +281,8 @@ hi! link StartifySpecial NormalFg
 
 hi! link svssBraces Delimiter
 hi! link swiftIdentifier NormalFg
+
+" TYPESCRIPT
 
 hi! link TSAttribute Special
 hi! link TSBoolean Constant
