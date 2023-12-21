@@ -143,15 +143,13 @@ let g:colors_name = 'essence'
     hi link markdownStrikeDelimiter       Highlight
     hi link markdownCode                  Code
     hi link markdownCodeDelimiter         Code
-    hi link markdownHeadingDelimiter      Delimiter
+    hi link markdownHeadingDelimiter      Normal
     hi def link markdownUrl               Comment
     hi markdownUrlTitle ctermfg=4 ctermbg=NONE
     hi def link markdownIdDelimiter       markdownLinkDelimiter
     hi markdownUrlDelimiter ctermfg=4 ctermbg=NONE
     hi def link markdownUrlTitleDelimiter Delimiter
 
-
-hi! link TermCursor Cursor
 hi! link ToolbarButton TabLineSel
 hi! link ToolbarLine TabLineFill
 
