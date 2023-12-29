@@ -51,7 +51,7 @@ let g:colors_name = 'essence'
     hi Operator ctermfg=4
     hi Special ctermfg=14
     hi SpecialKey ctermfg=14
-    hi linkText ctermbg=NONE ctermfg=4 term=underline
+    hi linkText ctermbg=NONE ctermfg=4 cterm=underline
     hi MatchParen ctermbg=14 ctermfg=0
     hi String ctermfg=12
     hi Type ctermfg=4
@@ -125,30 +125,31 @@ let g:colors_name = 'essence'
 " PMENU (LSP)
     hi Pmenu ctermfg=15 ctermbg=8
     hi PmenuSel ctermfg=15 ctermbg=9
-    hi link PmenuKind                   Pmenu
-    hi link PmenuKindSel                PmenuSel
-    hi link PmenuExtra                  Pmenu
-    hi link PmenuExtraSel               PmenuSel
-    hi PmenuSbar ctermbg=8 
-    hi PmenuThumb ctermbg=8
+    hi link PmenuKind                     Pmenu
+    hi link PmenuKindSel                  PmenuSel
+    hi link PmenuExtra                    Pmenu
+    hi link PmenuExtraSel                 PmenuSel
+    hi link PmenuSbar                     Pmenu 
+    hi link PmenuThumb                    Pmenu
 
 " MARKDOWN
     hi link markdownItalic                Highlight
-    hi link markdownItalicDelimiter       Highlight
+    hi link markdownItalicDelimiter       Comment
     hi link markdownBold                  Highlight
-    hi link markdownBoldDelimiter         Highlight
+    hi link markdownBoldDelimiter         Comment
     hi link markdownBoldItalic            Highlight
-    hi link markdownBoldItalicDelimiter   Highlight
+    hi link markdownBoldItalicDelimiter   Comment
     hi link markdownStrike                Highlight
-    hi link markdownStrikeDelimiter       Highlight
+    hi link markdownStrikeDelimiter       Comment
     hi link markdownCode                  Code
     hi link markdownCodeDelimiter         Code
     hi link markdownHeadingDelimiter      Normal
-    hi def link markdownUrl               Comment
-    hi markdownUrlTitle ctermfg=4 ctermbg=NONE
-    hi def link markdownIdDelimiter       markdownLinkDelimiter
-    hi markdownUrlDelimiter ctermfg=4 ctermbg=NONE
-    hi def link markdownUrlTitleDelimiter Delimiter
+    hi link markdownUrl                   Comment
+    hi link markdownLinkText              linkText
+    hi link markdownUrlTitle              linkText
+    hi link markdownIdDelimiter           Delimiter
+    hi link markdownUrlDelimiter          Delimiter
+    hi link markdownUrlTitleDelimiter     Delimiter
 
 hi! link ToolbarButton TabLineSel
 hi! link ToolbarLine TabLineFill
