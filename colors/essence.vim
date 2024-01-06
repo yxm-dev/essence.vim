@@ -79,7 +79,7 @@ let g:colors_name = 'essence'
     hi WarningMsg ctermbg=8 ctermfg=1
 "> Spell
     hi SpellBad ctermbg=6 ctermfg=0
-    hi SpellCap ctermbg=NONE ctermfg=NONE
+    hi SpellCap ctermbg=13 ctermfg=0
     hi SpellLocal ctermbg=13 ctermfg=0
     hi SpellRare ctermbg=4 ctermfg=0
 "> Cursor
